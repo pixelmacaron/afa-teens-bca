@@ -196,3 +196,19 @@ body {
     box-shadow: 1px 5px 3px 2px rgb(15, 35, 42);
 
 }
+
+.members {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    height: 800px;
+}
+
+.member {
+    background-color: aqua;
+    height: auto;
+    width: auto;
+    justify-content: center;
+    align-content: center;
+}

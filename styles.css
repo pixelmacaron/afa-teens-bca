@@ -7,7 +7,6 @@
 }
 
 html,body{
-    overflow-x:hidden;
     flex-direction: column;
     display: flex;
     flex-direction: column;
@@ -27,7 +26,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.5vh;
+    font-size: 1.2rem;
     position: sticky;
     top: 0;
     z-index: 999;
@@ -187,7 +186,7 @@ footer {
     margin-bottom: 0px;
     bottom: 0;
     background-color: #131313;
-    height: auto;
+    height: 20vh;
     width: 100%;
     color: white;
 }
@@ -211,13 +210,15 @@ footer {
 }
 
 .introduction-text {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: left;
     width: 75%;
+    padding: 30px;
     line-height: 1.5;
     font-size: 2.5vh;
     background-color: rgb(233, 245, 255);
     margin: auto;
     margin-bottom: 3%;
-    box-shadow: 1px 5px 3px 2px rgb(15, 35, 42);
 
 }
 
@@ -242,14 +243,14 @@ footer {
     justify-content: center;
     align-content: center;
     transition: all 0.7s ease;
-    box-shadow: 1vh 1vh 3vh #5874c7 inset;
+    /* box-shadow: 1vh 1vh 3vh #5874c7 inset; */
     h2 {
         font-size: 3.5vh;
         color: #fff;
         text-shadow: 0 0 3px #0000ff, 0 0 5px #000000;
       }
     h3 {
-        font-size: 2vh;
+        font-size: 2.5vh;
         margin: 2%;
         border-radius: 4vh;
         background-color: #22b0ba;
@@ -268,7 +269,8 @@ footer {
         }
     }
     .member-info {
-        font-size: 1.75vh;
+        color: #0f2645;
+        font-size: 2.25vh;
         justify-content: center;
         align-items: center;
         width: 50vh;
@@ -334,4 +336,86 @@ footer {
         justify-content: center;
         align-items: center;
     } 
+}
+
+/* scrollbar width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* scrollbar track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 50px #030d39;
+}
+
+/* scrollbar handle */
+::-webkit-scrollbar-thumb {
+    background: #4b64af; 
+    border-radius: 10px;
+}
+  
+/* handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #3f5494; 
+}
+
+*::before, *::after {
+    box-sizing: border-box
+}
+.carousel {
+    max-width: 90vh;
+    height: 40vh;
+    position: relative;
+    margin: auto;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+}
+
+.slides {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+}
+
+.slides > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slides[data-active] {
+    opacity: 1;
+}
+
+.carousel-button {
+    position: absolute;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    top: 50%;
+    z-index: 5;
+    transform: translateY()-50%;
+    color: #fff;
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0 .5rem;
+    background-color: rgba(0,0,0,.1);
+}
+
+.carousel-button:hover, .carousel-button:focus{
+    background-color: rgba(0,0,0,.3);
+}
+
+.carousel-button.prev {
+    left: 1rem;
+}
+
+.carousel-button.right {
+    right: 1rem;
 }
